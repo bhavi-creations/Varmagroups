@@ -1123,7 +1123,7 @@ body {
 	Why choose CSS
 =====================*/
 @media (min-width:768px) {
-	
+
 	.why-choose .choose-left h3 {
 		font-size: 24px;
 		font-weight: 600;
@@ -1132,6 +1132,7 @@ body {
 		padding-bottom: 20px;
 		margin-bottom: 24px;
 	}
+
 	.why-choose .choose-left h3:before {
 		position: absolute;
 		content: "";
@@ -1142,8 +1143,9 @@ body {
 		background: #1a76d1;
 	}
 }
+
 @media (max-width:768px) {
-	
+
 	.why-choose .choose-left h3 {
 		font-size: 24px;
 		font-weight: 600;
@@ -1153,6 +1155,7 @@ body {
 		margin-bottom: 24px;
 		margin-top: 50px;
 	}
+
 	.why-choose .choose-left h3:before {
 		position: absolute;
 		content: "";
@@ -5194,19 +5197,19 @@ figure>div {
 }
 
 @media (min-width:768px) {
-	
+
 	.main_logo_style {
 		border-radius: 50%;
 	}
 }
 
 @media (max-width:768px) {
-	
+
 	.main_logo_style {
 		border-radius: 50%;
 		width: 50%;
-	 
-	 
+
+
 	}
 }
 
@@ -5245,81 +5248,99 @@ figure>div {
 }
 
 @media (min-width:992px) {
-	
-	
+
+
 	.three_text {
 		margin-top: 75px;
 		display: flex;
-		align-items: center;      /* Vertically centers the items */
-		justify-content: center;  /* Horizontally centers the items */
-		gap: 40px;                /* Adds space between the headings */
+		align-items: center;
+		/* Vertically centers the items */
+		justify-content: center;
+		/* Horizontally centers the items */
+		gap: 40px;
+		/* Adds space between the headings */
 	}
 
-.hrline {
-  position: relative;
-  font-size: 30px;          /* Adjust the font size */
-  padding-right: 20px;      /* Space between the text and line */
+	.hrline {
+		position: relative;
+		font-size: 30px;
+		/* Adjust the font size */
+		padding-right: 20px;
+		/* Space between the text and line */
+	}
+
+	.hrline:not(:last-child)::after {
+		content: "";
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 100%;
+		/* Height of the vertical line */
+		width: 3px;
+		/* Thickness of the line */
+		background-color: #e6a308;
+		/* Color of the line */
+	}
 }
 
-.hrline:not(:last-child)::after {
-	content: "";
-	position: absolute;
-  right: 0;
-  top: 0;
-  height: 100%;             /* Height of the vertical line */
-  width: 3px;               /* Thickness of the line */
-  background-color: #e6a308;    /* Color of the line */
-}
-}
+@media (min-width:768px) and (max-width:992px) {
 
-@media  (min-width:768px)  and (max-width:992px) {
-	
-	
+
 	.three_text {
 		margin-top: 50px;
 		display: flex;
-		align-items: center;      /* Vertically centers the items */
-		justify-content: center;  /* Horizontally centers the items */
-		gap: 40px;                /* Adds space between the headings */
+		align-items: center;
+		/* Vertically centers the items */
+		justify-content: center;
+		/* Horizontally centers the items */
+		gap: 40px;
+		/* Adds space between the headings */
 	}
 
-.hrline {
-  position: relative;
-  font-size: 20px;          /* Adjust the font size */
-  padding-right: 20px;      /* Space between the text and line */
+	.hrline {
+		position: relative;
+		font-size: 20px;
+		/* Adjust the font size */
+		padding-right: 20px;
+		/* Space between the text and line */
+	}
+
+	.hrline:not(:last-child)::after {
+		content: "";
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 100%;
+		/* Height of the vertical line */
+		width: 3px;
+		/* Thickness of the line */
+		background-color: #e6a308;
+		/* Color of the line */
+	}
 }
 
-.hrline:not(:last-child)::after {
-	content: "";
-	position: absolute;
-  right: 0;
-  top: 0;
-  height: 100%;             /* Height of the vertical line */
-  width: 3px;               /* Thickness of the line */
-  background-color: #e6a308;    /* Color of the line */
-}
-}
+
+@media (max-width:768px) {
 
 
-@media    (max-width:768px) {
-	
-	
 	.three_text {
-	 
+
 		display: none;
-	                 
+
 	}
- .md_block_mobile{
-	margin-top: 50px;
-	text-align: center;
-	
-	
- }
- .mobile_small{
-	font-size: 30px;
-	font-weight: 500;
-	line-height: 50px;
- }
+
+	.md_block_mobile {
+		margin-top: 50px;
+		text-align: center;
+
+
+	}
+
+	.mobile_small {
+		font-size: 30px;
+		font-weight: 500;
+		line-height: 50px;
+	}
 }
 
 
@@ -5329,76 +5350,77 @@ figure>div {
 
 
 	.second_divv_end_brand {
-	  padding-left: 35%;
-	  margin-top: -10px;
+		padding-left: 35%;
+		margin-top: -10px;
 	}
-  
-	.brand_image {
-	  width: 23%;
-	  margin-top: 0%;
-	  margin-left: 5px;
-	}
-  }
-  
-  @media (min-width:992px) and (max-width:1200px) {
-  
-  
-	.second_divv_end_brand {
-	  padding-left: 32%;
-	  margin-top: -10px;
-	}
-  
-	.brand_image {
-	  width: 23%;
-	  margin-top: 0%;
-	  margin-left: 5px;
-	}
-  }
-  
-  @media (max-width:768px)  {
-  
-  
-	.second_divv_end_brand {
-	  padding-left: 4%;
-	  margin-top: 0px;
-	}
-  
-	.brand_image {
-	  width: 12%;
-	  margin-top: 0%;
-	  margin-left: 5px;
-	}
-  }
-  
-  @media (min-width:768px) and (max-width:992px) {
-  
-  
-	.second_divv_end_brand {
-	  padding-left: 23%;
-	  margin-top: -10px;
-	}
-  
-	.brand_image {
-	  width: 23%;
-	  margin-top: 0%;
-	  margin-left: 5px;
-	}
-  }
 
-  .strength_img{
+	.brand_image {
+		width: 23%;
+		margin-top: 0%;
+		margin-left: 5px;
+	}
+}
+
+@media (min-width:992px) and (max-width:1200px) {
+
+
+	.second_divv_end_brand {
+		padding-left: 32%;
+		margin-top: -10px;
+	}
+
+	.brand_image {
+		width: 23%;
+		margin-top: 0%;
+		margin-left: 5px;
+	}
+}
+
+@media (max-width:768px) {
+
+
+	.second_divv_end_brand {
+		padding-left: 4%;
+		margin-top: 0px;
+	}
+
+	.brand_image {
+		width: 12%;
+		margin-top: 0%;
+		margin-left: 5px;
+	}
+}
+
+@media (min-width:768px) and (max-width:992px) {
+
+
+	.second_divv_end_brand {
+		padding-left: 23%;
+		margin-top: -10px;
+	}
+
+	.brand_image {
+		width: 23%;
+		margin-top: 0%;
+		margin-left: 5px;
+	}
+}
+
+.strength_img {
 	border-radius: 5px;
-  }
+}
+
 @media (min-width:768px) {
-	
-	.middle_row{
+
+	.middle_row {
 		margin-top: 50px;
 		margin-bottom: 50px;
 	}
 }
 
 @media (max-width:768px) {
-	
-	.middle_row{
+
+	.middle_row {
 		margin-top: -70px;
 		margin-bottom: -70px;
 	}
@@ -5425,22 +5447,146 @@ figure>div {
 	border-collapse: collapse;
 	margin: 20px 0;
 	font-size: 16px;
-  }
-  
-  .table th, .table td {
+}
+
+.table th,
+.table td {
 	padding: 12px 15px;
 	border: 1px solid #7b737399;
 	text-align: left;
-  }
-  
-  .table th {
+}
+
+.table th {
 	background-color: #002f5ebb;
 	font-weight: bold;
 	color: white;
-  }
-  
-  .table tbody tr:nth-child(even) {
+}
+
+.table tbody tr:nth-child(even) {
 	background-color: #0221413e;
 	color: white;
+}
+
+
+
+@media (min-width:992px) {
+
+
+	.bordered-list {
+		border: 1px solid #333;
+		padding: 20px;
+		border-radius: 8px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	.aligned-list li {
+		display: grid;
+		grid-template-columns: 200px 1fr;
+		/* Sets fixed width for labels */
+		gap: 80px;
+		/* Adds space between label and content */
+		align-items: center;
+		line-height: 1.6;
+	}
+
+	.aligned-list li strong {
+		grid-column: span 2;
+		/* Makes strong elements span across both columns */
+		margin-top: 10px;
+	}
+
+	.label {
+		font-weight: bold;
+	}
+
+	.content {
+		text-align: left;
+	}
+
+}
+
+
+@media (max-width:992px) {
+
+
+	.bordered-list {
+		border: 1px solid #333;
+		padding: 20px;
+		border-radius: 8px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	.aligned-list li {
+		display: grid;
+		grid-template-columns: 200px 1fr;
+		/* Sets fixed width for labels */
+		gap: 0px;
+		/* Adds space between label and content */
+		align-items: center;
+		line-height: 1.6;
+	}
+
+	.aligned-list li strong {
+		grid-column: span 2;
+		/* Makes strong elements span across both columns */
+		margin-top: 10px;
+	}
+
+	.label {
+		font-weight: bold;
+	}
+
+	.content {
+		text-align: left;
+	}
+
+}
+
+
+
+.table_format {
+	list-style-type: none; /* Removes the default bullet points */
+	padding: 0;
+	margin: 0;
+	border: 2px solid #333; /* Adds the outer border */
+	border-radius: 8px; /* Rounds the corners of the border */
+	overflow: hidden; /* Ensures rounded corners apply to the content */
   }
   
+  .table_format li {
+	display: grid;
+	grid-template-columns: 1fr 1fr; /* Creates two equal columns */
+	padding: 10px;
+	border-bottom: 1px solid #ddd; /* Adds a border between items */
+	align-items: center; /* Vertically centers the content */
+  }
+  
+  .table_format li:last-child {
+	border-bottom: none; /* Removes the border on the last item */
+  }
+  
+  .table_label {
+	font-weight: bold;
+	padding-right: 20px; /* Adds space between label and content */
+	text-align: left; /* Aligns the label to the left */
+  }
+  
+  .table_content {
+	text-align: right; /* Aligns the content to the right */
+  }
+  @media (max-width:768px) {
+	
+	  .only_pt_md{
+		  margin-top: 50px;
+		}  
+
+		.padding_top{
+			margin-top: -130px;
+		}
+
+		.same_space{
+			margin-top: -170px !important;
+		}
+	}
