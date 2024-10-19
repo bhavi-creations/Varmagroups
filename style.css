@@ -320,7 +320,7 @@ body {
 .header .top-contact li {
 	display: inline-block;
 	margin-right: 25px;
-	color: #2C2D3F;
+	color: #3f2c3f;
 }
 
 .header .top-contact li:last-child {
@@ -827,7 +827,7 @@ body {
 	text-align: left;
 	z-index: 3;
 	border-radius: 5px;
-	background: #7ea0c2;
+	background: #7ea0c296;
 	-webkit-transition: all .3s ease-out 0s;
 	-moz-transition: all .3s ease-out 0s;
 	-ms-transition: all .3s ease-out 0s;
@@ -853,7 +853,7 @@ body {
 	margin: 0 auto;
 	width: 80%;
 	height: 90%;
-	background: #7ea0c2;
+	background: #7ea0c296;
 	opacity: 0;
 	filter: blur(10px);
 	-webkit-transition: all .3s ease-out 0s;
@@ -5590,3 +5590,15 @@ figure>div {
 			margin-top: -170px !important;
 		}
 	}
+
+
+	.its_color{
+ 
+  color: #002f5ebb ;
+  text-decoration: none;
+}
+
+.its_color:hover {
+  color: #888888;
+  text-decoration: none;
+}
