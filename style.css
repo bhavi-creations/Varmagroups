@@ -356,6 +356,7 @@ body {
 	background-color: #002f5ebb;
 }
 
+
 @media (max-width:768px) {
 	.header .logo {
 		float: left;
@@ -809,9 +810,173 @@ body {
 /*=============================
 	Start Schedule CSS
 ===============================*/
+@media (min-width:1200px) {
+	
+
+	.schedule {
+		background: #fff;
+		margin-top: 50px;
+		padding: 0;
+		height: 230px;
+	}
+	
+	.schedule .schedule-inner {
+		position: relative;
+		transform: translateY(-50%);
+		z-index: 9;
+	}
+	
+	.schedule .single-schedule {
+		position: relative;
+		text-align: left;
+		z-index: 3;
+		border-radius: 5px;
+		background: #7ea0c296;
+		-webkit-transition: all .3s ease-out 0s;
+		-moz-transition: all .3s ease-out 0s;
+		-ms-transition: all .3s ease-out 0s;
+		-o-transition: all .3s ease-out 0s;
+		transition: all .3s ease-out 0s;
+		/* background-image: linear-gradient(to right top, #96bdf8, #b5c0fb, #d0c3fb, #e8c8f9, #fbcdf5); */
+	}
+	
+	.schedule .single-schedule .inner {
+		overflow: hidden;
+		position: relative;
+		padding: 30px;
+		z-index: 2;
+	}
+	
+	.schedule .single-schedule:before {
+		position: absolute;
+		z-index: -1;
+		content: '';
+		bottom: -10px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		width: 80%;
+		height: 90%;
+		background: #7ea0c296;
+		opacity: 0;
+		filter: blur(10px);
+		-webkit-transition: all .3s ease-out 0s;
+		-moz-transition: all .3s ease-out 0s;
+		-ms-transition: all .3s ease-out 0s;
+		-o-transition: all .3s ease-out 0s;
+		transition: all .3s ease-out 0s;
+		/* background-image: linear-gradient(to right top, #96bdf8, #b5c0fb, #d0c3fb, #e8c8f9, #fbcdf5); */
+	}
+	
+	.schedule .single-schedule:hover:before {
+		opacity: 0.8;
+	}
+	
+	.schedule .single-schedule:hover {
+		transform: translateY(-5px);
+	}
+	
+	.schedule .single-schedule .icon i {
+		position: absolute;
+		font-size: 110px;
+		color: #fff;
+		-webkit-transition: all .3s ease-out 0s;
+		-moz-transition: all .3s ease-out 0s;
+		-ms-transition: all .3s ease-out 0s;
+		-o-transition: all .3s ease-out 0s;
+		transition: all .3s ease-out 0s;
+		z-index: -1;
+		visibility: visible;
+		opacity: 0.2;
+		right: -25px;
+		bottom: -30px;
+	}
+	
+	.schedule .single-schedule span {
+		display: block;
+		color: #fff;
+	}
+	
+	.schedule .single-schedule h4 {
+		font-size: 19px;
+		font-weight: 600;
+		display: inline-block;
+		text-transform: capitalize;
+		color: #fff;
+		margin-top: 5px;
+	}
+	
+	.schedule .single-schedule p {
+		color: #fff;
+		margin-top: 22px;
+	}
+	
+	.schedule .single-schedule a {
+		color: #fff;
+		margin-top: 25px;
+		font-weight: 500;
+		display: inline-block;
+		position: relative;
+	}
+	
+	.schedule .single-schedule a:before {
+		position: absolute;
+		content: "";
+		left: 0;
+		bottom: 0;
+		height: 1px;
+		width: 0%;
+		background: #fff;
+		-webkit-transition: all 0.4s ease;
+		-moz-transition: all 0.4s ease;
+		transition: all 0.4s ease;
+	}
+	
+	.schedule .single-schedule a:hover:before {
+		width: 100%;
+		width: 100%;
+	}
+	
+	.schedule .single-schedule a i {
+		margin-left: 10px;
+	}
+	
+	.schedule .single-schedule .time-sidual {}
+	
+	.schedule .single-schedule .time-sidual {
+		overflow: hidden;
+		margin-top: 17px;
+	}
+	
+	.schedule .single-schedule .time-sidual li {
+		display: block;
+		color: #fff;
+		width: 100%;
+		margin-bottom: 3px;
+	}
+	
+	.schedule .single-schedule .time-sidual li:last-child {
+		margin: 0;
+	}
+	
+	.schedule .single-schedule .time-sidual li span {
+		display: inline-block;
+		float: right;
+	}
+	
+	.schedule .single-schedule .day-head .time {
+		font-weight: 400;
+		float: right;
+	}
+	}
+
+
+@media  (min-width:992px) and (max-width:1200px) {
+	
+
 .schedule {
 	background: #fff;
-	margin: 0;
+	margin-top: -80px;
 	padding: 0;
 	height: 230px;
 }
@@ -964,6 +1129,330 @@ body {
 	font-weight: 400;
 	float: right;
 }
+}
+
+
+@media   (min-width:762px) and (max-width:992px){
+	
+
+	.schedule {
+		background: #fff;
+		margin-top: -150px !important;
+		padding: 0;
+		height: 230px;
+	}
+	
+	.schedule .schedule-inner {
+		position: relative;
+		transform: translateY(-50%);
+		z-index: 9;
+	}
+	
+	.schedule .single-schedule {
+		position: relative;
+		text-align: left;
+		z-index: 3;
+		border-radius: 5px;
+		background: #7ea0c296;
+		-webkit-transition: all .3s ease-out 0s;
+		-moz-transition: all .3s ease-out 0s;
+		-ms-transition: all .3s ease-out 0s;
+		-o-transition: all .3s ease-out 0s;
+		transition: all .3s ease-out 0s;
+		/* background-image: linear-gradient(to right top, #96bdf8, #b5c0fb, #d0c3fb, #e8c8f9, #fbcdf5); */
+	}
+	
+	.schedule .single-schedule .inner {
+		overflow: hidden;
+		position: relative;
+		padding: 30px;
+		z-index: 2;
+	}
+	
+	.schedule .single-schedule:before {
+		position: absolute;
+		z-index: -1;
+		content: '';
+		bottom: -10px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		width: 80%;
+		height: 90%;
+		background: #7ea0c296;
+		opacity: 0;
+		filter: blur(10px);
+		-webkit-transition: all .3s ease-out 0s;
+		-moz-transition: all .3s ease-out 0s;
+		-ms-transition: all .3s ease-out 0s;
+		-o-transition: all .3s ease-out 0s;
+		transition: all .3s ease-out 0s;
+		/* background-image: linear-gradient(to right top, #96bdf8, #b5c0fb, #d0c3fb, #e8c8f9, #fbcdf5); */
+	}
+	
+	.schedule .single-schedule:hover:before {
+		opacity: 0.8;
+	}
+	
+	.schedule .single-schedule:hover {
+		transform: translateY(-5px);
+	}
+	
+	.schedule .single-schedule .icon i {
+		position: absolute;
+		font-size: 110px;
+		color: #fff;
+		-webkit-transition: all .3s ease-out 0s;
+		-moz-transition: all .3s ease-out 0s;
+		-ms-transition: all .3s ease-out 0s;
+		-o-transition: all .3s ease-out 0s;
+		transition: all .3s ease-out 0s;
+		z-index: -1;
+		visibility: visible;
+		opacity: 0.2;
+		right: -25px;
+		bottom: -30px;
+	}
+	
+	.schedule .single-schedule span {
+		display: block;
+		color: #fff;
+	}
+	
+	.schedule .single-schedule h4 {
+		font-size: 19px;
+		font-weight: 600;
+		display: inline-block;
+		text-transform: capitalize;
+		color: #fff;
+		margin-top: 5px;
+	}
+	
+	.schedule .single-schedule p {
+		color: #fff;
+		margin-top: 22px;
+	}
+	
+	.schedule .single-schedule a {
+		color: #fff;
+		margin-top: 25px;
+		font-weight: 500;
+		display: inline-block;
+		position: relative;
+	}
+	
+	.schedule .single-schedule a:before {
+		position: absolute;
+		content: "";
+		left: 0;
+		bottom: 0;
+		height: 1px;
+		width: 0%;
+		background: #fff;
+		-webkit-transition: all 0.4s ease;
+		-moz-transition: all 0.4s ease;
+		transition: all 0.4s ease;
+	}
+	
+	.schedule .single-schedule a:hover:before {
+		width: 100%;
+		width: 100%;
+	}
+	
+	.schedule .single-schedule a i {
+		margin-left: 10px;
+	}
+	
+	.schedule .single-schedule .time-sidual {}
+	
+	.schedule .single-schedule .time-sidual {
+		overflow: hidden;
+		margin-top: 17px;
+	}
+	
+	.schedule .single-schedule .time-sidual li {
+		display: block;
+		color: #fff;
+		width: 100%;
+		margin-bottom: 3px;
+	}
+	
+	.schedule .single-schedule .time-sidual li:last-child {
+		margin: 0;
+	}
+	
+	.schedule .single-schedule .time-sidual li span {
+		display: inline-block;
+		float: right;
+	}
+	
+	.schedule .single-schedule .day-head .time {
+		font-weight: 400;
+		float: right;
+	}
+	}
+
+	@media    (max-width:762px){
+	
+		.single-content{
+			display: none;
+		}
+
+		.schedule {
+			background: #fff;
+			margin-top: -300px !important;
+			padding: 0;
+			height: 230px;
+		}
+		
+		.schedule .schedule-inner {
+			position: relative;
+			transform: translateY(-50%);
+			z-index: 9;
+		}
+		
+		.schedule .single-schedule {
+			position: relative;
+			text-align: left;
+			z-index: 3;
+			border-radius: 5px;
+			background: #7ea0c296;
+			-webkit-transition: all .3s ease-out 0s;
+			-moz-transition: all .3s ease-out 0s;
+			-ms-transition: all .3s ease-out 0s;
+			-o-transition: all .3s ease-out 0s;
+			transition: all .3s ease-out 0s;
+			/* background-image: linear-gradient(to right top, #96bdf8, #b5c0fb, #d0c3fb, #e8c8f9, #fbcdf5); */
+		}
+		
+		.schedule .single-schedule .inner {
+			overflow: hidden;
+			position: relative;
+			z-index: 2;
+		}
+		
+		.schedule .single-schedule:before {
+			position: absolute;
+			z-index: -1;
+			content: '';
+			bottom: -10px;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			width: 80%;
+			height: 90%;
+			background: #7ea0c296;
+			opacity: 0;
+			filter: blur(10px);
+			-webkit-transition: all .3s ease-out 0s;
+			-moz-transition: all .3s ease-out 0s;
+			-ms-transition: all .3s ease-out 0s;
+			-o-transition: all .3s ease-out 0s;
+			transition: all .3s ease-out 0s;
+			/* background-image: linear-gradient(to right top, #96bdf8, #b5c0fb, #d0c3fb, #e8c8f9, #fbcdf5); */
+		}
+		
+		.schedule .single-schedule:hover:before {
+			opacity: 0.8;
+		}
+		
+		.schedule .single-schedule:hover {
+			transform: translateY(-5px);
+		}
+		
+		.schedule .single-schedule .icon i {
+			position: absolute;
+			font-size: 110px;
+			color: #fff;
+			-webkit-transition: all .3s ease-out 0s;
+			-moz-transition: all .3s ease-out 0s;
+			-ms-transition: all .3s ease-out 0s;
+			-o-transition: all .3s ease-out 0s;
+			transition: all .3s ease-out 0s;
+			z-index: -1;
+			visibility: visible;
+			opacity: 0.2;
+			right: -25px;
+			bottom: -30px;
+		}
+		
+		.schedule .single-schedule span {
+			display: block;
+			color: #fff;
+		}
+		
+		.schedule .single-schedule h4 {
+			font-size: 19px;
+			font-weight: 600;
+			display: inline-block;
+			text-transform: capitalize;
+			color: #fff;
+			margin-top: 5px;
+		}
+		
+		.schedule .single-schedule p {
+			color: #fff;
+			margin-top: 22px;
+		}
+		
+		.schedule .single-schedule a {
+			color: #fff;
+			margin-top: 25px;
+			font-weight: 500;
+			display: inline-block;
+			position: relative;
+		}
+		
+		.schedule .single-schedule a:before {
+			position: absolute;
+			content: "";
+			left: 0;
+			bottom: 0;
+			height: 1px;
+			width: 0%;
+			background: #fff;
+			-webkit-transition: all 0.4s ease;
+			-moz-transition: all 0.4s ease;
+			transition: all 0.4s ease;
+		}
+		
+		.schedule .single-schedule a:hover:before {
+			width: 100%;
+			width: 100%;
+		}
+		
+		.schedule .single-schedule a i {
+			margin-left: 10px;
+		}
+		
+		.schedule .single-schedule .time-sidual {}
+		
+		.schedule .single-schedule .time-sidual {
+			overflow: hidden;
+			margin-top: 17px;
+		}
+		
+		.schedule .single-schedule .time-sidual li {
+			display: block;
+			color: #fff;
+			width: 100%;
+			margin-bottom: 3px;
+		}
+		
+		.schedule .single-schedule .time-sidual li:last-child {
+			margin: 0;
+		}
+		
+		.schedule .single-schedule .time-sidual li span {
+			display: inline-block;
+			float: right;
+		}
+		
+		.schedule .single-schedule .day-head .time {
+			font-weight: 400;
+			float: right;
+		}
+		}
 
 /*=============================
 	End Schedule CSS
@@ -5601,4 +6090,25 @@ figure>div {
 .its_color:hover {
   color: #888888;
   text-decoration: none;
+}
+
+ 
+
+.app_btn_md {
+	margin-top: 12px;
+}
+
+.app_btn_md .btn {
+	color: #fff;
+	background-color: #002f5ebb;
+}
+
+
+
+
+.makee {
+	color: #fff;
+	background-color: #002f5ebb;
+	padding: 10px 20px ;
+	border-radius: 5px;
 }
