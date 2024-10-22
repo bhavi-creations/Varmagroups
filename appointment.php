@@ -52,6 +52,10 @@
 
   <link href="assets/css/style.css" rel="stylesheet" />
 
+  <link
+      href="assets/vendor/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+    />
 </head>
 
 <body>
@@ -374,10 +378,14 @@
 
 
 
-  <!-- <a href="https://api.whatsapp.com/send?phone=919999999999" style="color: #fff;" class="whatsapp-link"
-    target="_blank">
-    <i class="fab fa-whatsapp"></i>
-  </a> -->
+  <a
+      href="https://api.whatsapp.com/send?phone=919000556159"
+      style="color: #fff"
+      class="whatsapp-link"
+      target="_blank"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
 
 
   <!-- jquery Min JS -->

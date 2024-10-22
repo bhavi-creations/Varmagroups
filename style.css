@@ -6112,3 +6112,24 @@ figure>div {
 	padding: 10px 20px ;
 	border-radius: 5px;
 }
+
+
+
+
+
+
+
+.whatsapp-link {
+	width: 50px;
+	height: 50px;
+	position: fixed;
+	bottom: 90px;
+	right: 12px;
+	background-color: #25d366;
+	color: #fff;
+	padding: 8px;
+	border-radius: 50%;
+	text-decoration: none;
+	font-size: 35px;
+	text-align: center;
+  }
