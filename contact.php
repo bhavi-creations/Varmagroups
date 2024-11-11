@@ -362,9 +362,7 @@
                   <li>
                     <a href="#"><i class="icofont-instagram"></i></a>
                   </li>
-                  <li>
-                    <a href="#"><i class="icofont-youtube"></i></a>
-                  </li>
+                  
                 </ul>
                 <!-- End Social -->
               </div>
