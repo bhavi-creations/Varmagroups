@@ -235,6 +235,7 @@ big {
 h1,h2,h3,h4,h5,h6{
 	font-weight:500;
 	color:#2C2D3F;
+	font-size: 15px;
 }
 a,button{
 	-webkit-transition:all 0.3s ease;
