@@ -1,22 +1,7 @@
 <?php
 include './db.connection/db_connection.php';
-// // Database connection (replace with your actual database connection details)
-// $servername = "localhost";
-// $username = "root";
-// $password = "";
-// $dbname = "ptschool";
 
-// // Create connection
-// $conn = new mysqli($servername, $username, $password, $dbname);
 
-// // Check connection
-// if ($conn->connect_error) {
-//     die("Connection failed: " . $conn->connect_error);
-// }
-
-// Fetch PDF data
-$pdf_sql = "SELECT title, pdf_path FROM pdf_uploads";
-$pdf_result = $conn->query($pdf_sql);
 ?>
 
 <!DOCTYPE html>
@@ -142,7 +127,7 @@ $pdf_result = $conn->query($pdf_sql);
               <div class="main-menu">
                 <nav class="navigation">
                   <ul class="nav menu">
-                    <li class="active nav_strong">
+                    <li class=" nav_strong">
                       <a href="index.html">Home </a>
                     </li>
 
@@ -158,7 +143,7 @@ $pdf_result = $conn->query($pdf_sql);
                       <a href="contact.php">Contact Us</a>
                     </li>
 
-                    <li class="nav_strong">
+                    <li class="nav_strong active">
                       <a href="posts.php">Posts</a>
                     </li>
                     <li class="app_btn_md d-none d-md-block d-lg-none">
@@ -195,160 +180,197 @@ $pdf_result = $conn->query($pdf_sql);
           <h2>Our Works</h2>
         </div>
       </div>
+
+
+
       <div class="container">
         <div class="row">
           <?php
-          if ($pdf_result->num_rows > 0) {
-            while ($pdf_row = $pdf_result->fetch_assoc()) {
-              $pdf_path = 'admin/public/' . $pdf_row['pdf_path'];
-              // Check if file exists
-              if (file_exists($pdf_path)) {
-                echo '<div class="col-4 col-md-3 my-2">';
-                echo '<a href="' . $pdf_path . '" target="_blank">';
-                echo '<img src="assets\img\pdf_image.jpg" class="img-fluid" style="border-radius :20px; ">';
-                echo '</a>';
-                echo '<p class="text-center mt-3">' . htmlspecialchars($pdf_row['title']) . '</p>';
-                echo '</div>';
-              } else {
-                echo '<div class="col-4 col-md-3 my-2">';
-                echo '<p class="text-center mt-3">File not found: ' . htmlspecialchars($pdf_path) . '</p>';
-                echo '</div>';
-              }
+          // Fetch image data from database
+          $image_sql = "SELECT id, title, image_path, created_at FROM image_uploads ORDER BY created_at DESC";
+          $image_result = $conn->query($image_sql);
+
+          if ($image_result->num_rows > 0) {
+            while ($image_row = $image_result->fetch_assoc()) {
+              $image_base = "admin/public/";
+              $image_path = $image_base . $image_row['image_path'];
+              echo "
+                                            <div class='col-12 col-md-4 col-custom my-2'>
+                                                <div class='card card-custom'>
+                                                    <img src='{$image_path}' class='card-img-top' alt='{$image_row['title']}'>
+                                                 
+                                                    <div class='card-body'>
+                                                        <h5 class='card-title'>{$image_row['title']}</h5>
+                                                        <p class='card-text'>Uploaded on: {$image_row['created_at']}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ";
             }
           } else {
-            echo '<p>No documents found.</p>';
+            echo "<p>No images found.</p>";
           }
+
+          $conn->close();
           ?>
         </div>
       </div>
+
+
     </section>
     <!-- End Contact Section -->
   </main>
   <!-- End #main -->
 
   <footer id="footer" class="footer">
-    <!-- Footer Top -->
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-6 col-12 text-center">
-            <a href="index.html">
-              <img
-                src="img/logos/main_logo 1.png"
-                class="main_logo_style img-fluid"
-                alt="" /></a>
-          </div>
-          <div class="col-lg-2 col-md-6 col-6">
-            <div class="single-footer f-link">
-              <h2>Quick Links</h2>
-              <div class="row">
-                <div class="col-lg-12 col-md-12 col-12">
-                  <ul>
-                    <li>
-                      <a href="index.html"><i class="fa fa-check-circle" aria-hidden="true"></i>Home</a>
-                    </li>
-                    <li>
-                      <a href="about.html"><i class="fa fa-check-circle" aria-hidden="true"></i>About Us</a>
-                    </li>
+      <!-- Footer Top -->
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-12 text-center">
+              <a href="index.html">
+                <img
+                  src="img/logos/main_logo 1.png"
+                  class="main_logo_style img-fluid"
+                  alt=""
+              /></a>
+            </div>
+            <div class="col-lg-2 col-md-6 col-6">
+              <div class="single-footer f-link">
+                <h2>Quick Links</h2>
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-12">
+                    <ul>
+                      <li>
+                        <a href="index.html"
+                          ><i class="fa fa-check-circle" aria-hidden="true"></i
+                          >Home</a
+                        >
+                      </li>
+                      <li>
+                        <a href="about.html"
+                          ><i class="fa fa-check-circle" aria-hidden="true"></i
+                          >About Us</a
+                        >
+                      </li>
 
-                    <li>
-                      <a href="gallery.html"><i class="fa fa-check-circle" aria-hidden="true"></i>Gallery</a>
-                    </li>
-                    <li>
-                      <a href="contact.php"><i class="fa fa-check-circle" aria-hidden="true"></i>Contact</a>
-                    </li>
-                  </ul>
+                      <li>
+                        <a href="gallery.html"
+                          ><i class="fa fa-check-circle" aria-hidden="true"></i
+                          >Gallery</a
+                        >
+                      </li>
+                      <li>
+                        <a href="contact.php"
+                          ><i class="fa fa-check-circle" aria-hidden="true"></i
+                          >Contact</a
+                        >
+                      </li>
+                      <li>
+                        <a href="posts.php"
+                          ><i class="fa fa-check-circle" aria-hidden="true"></i
+                          >Posts</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col-lg-3 col-md-6 col-6">
-            <div class="single-footer">
-              <h2>Open Hours</h2>
-              <ul class="footul mt-2">
-                <li class="footli">monday-Saturday : 9am - 6pm</li>
-                <li class="footli">Sunday : Holiday</li>
-              </ul>
+            <div class="col-lg-3 col-md-6 col-6">
+              <div class="single-footer">
+                <h2>Open Hours</h2>
+                <ul class="footul mt-2">
+                  <li class="footli">monday-Saturday : 9am - 6pm</li>
+                  <li class="footli">Sunday : Holiday</li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-12">
-            <div class="single-footer">
-              <h2>Contact Us</h2>
-              <p>Plot No.142 - APIIC,</p>
-              <p>Ramanayyapeta - Kakinada</p>
-              <p>Kakainda District - 533005</p>
-              <p>Andhra Pradeshn- India.</p>
-              <p>
-                Cell: +91 7286878601, +91 7286878602, <br />
-                +91 7286878603
-              </p>
-              <p>Email: varmaindustrialenterprises@gmail.com</p>
-              <!-- Social -->
-              <ul class="social">
-                <li>
-                  <a href="https://www.facebook.com/varmagroups2024"><i class="icofont-facebook"></i></a>
-                </li>
-                <li>
-                  <a href="https://www.instagram.com/varmagroups2024/"><i class="icofont-instagram"></i></a>
-                </li>
-                <!-- <li>
+            <div class="col-lg-4 col-md-6 col-12">
+              <div class="single-footer">
+                <h2>Contact Us</h2>
+                <p>Plot No.142 - APIIC,</p>
+                <p>Ramanayyapeta - Kakinada</p>
+                <p>Kakainda District - 533005</p>
+                <p>Andhra Pradeshn- India.</p>
+                <p>
+                  Cell: +91 7286878601, +91 7286878602, <br />
+                  +91 7286878603
+                </p>
+                <p>Email: varmaindustrialenterprises@gmail.com</p>
+                <!-- Social -->
+                <ul class="social">
+                  <li>
+                    <a href="https://www.facebook.com/varmagroups2024"><i class="icofont-facebook"></i></a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/varmagroups2024/"><i class="icofont-instagram"></i></a>
+                  </li>
+                  <!-- <li>
                     <a href="#"><i class="icofont-youtube"></i></a>
                   </li> -->
-              </ul>
-              <!-- End Social -->
+                </ul>
+                <!-- End Social -->
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <!--/ End Footer Top -->
-    <!-- Copyright -->
-    <div
-      class="footer-area-bottom theme-bg pb-3"
-      style="background-color: #040d30ed">
-      <div class="container">
-        <div class="row pt-4">
-          <div class="col-md-6 col-12">
-            <div class="footer-widget__copyright-info info-direction">
-              <p class="last_text">
-                <a
-                  href="terms.html"
-                  style="text-decoration: none; color: #ffffff">Terms & conditions :
-                </a>
-                <a
-                  href="privacy.html"
-                  style="text-decoration: none; color: #ffffff">
-                  Privacy & policy</a>
-              </p>
+      <!--/ End Footer Top -->
+      <!-- Copyright -->
+      <div
+        class="footer-area-bottom theme-bg pb-3"
+        style="background-color: #040d30ed"
+      >
+        <div class="container">
+          <div class="row pt-4">
+            <div class="col-md-6 col-12">
+              <div class="footer-widget__copyright-info info-direction">
+                <p class="last_text">
+                  <a
+                    href="terms.html"
+                    style="text-decoration: none; color: #ffffff"
+                    >Terms & conditions :
+                  </a>
+                  <a
+                    href="privacy.html"
+                    style="text-decoration: none; color: #ffffff"
+                  >
+                    Privacy & policy</a
+                  >
+                </p>
+              </div>
             </div>
-          </div>
 
-          <div class="col-md-6 col-12 second_divv_end_brand">
-            <div
-              class="footer-widget__copyright-info info-direction d-flex flex-row justify-content-end align-items-center">
-              <a
-                href="https://bhavicreations.com/"
-                target="_blank"
-                style="
+            <div class="col-md-6 col-12 second_divv_end_brand">
+              <div
+                class="footer-widget__copyright-info info-direction d-flex flex-row justify-content-end align-items-center"
+              >
+                <a
+                  href="https://bhavicreations.com/"
+                  target="_blank"
+                  style="
                     text-decoration: none;
                     color: #ffffff;
                     display: flex;
                     align-items: center;
-                  ">
-                <p class="mini_text last_text mb-0" style="color: white">
-                  Branding By @
-                </p>
-                <img
-                  src="img/bhavi_logo/Bhavi_Branding_Stamp.png"
-                  class="img-fluid brand_image"
-                  alt="" />
-              </a>
+                  "
+                >
+                  <p class="mini_text last_text mb-0" style="color: white">
+                    Branding By @
+                  </p>
+                  <img
+                    src="img/bhavi_logo/Bhavi_Branding_Stamp.png"
+                    class="img-fluid brand_image"
+                    alt=""
+                  />
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
   <!--/ End Footer Area -->
   <a
     href="https://api.whatsapp.com/send?phone=917286878601"
@@ -401,8 +423,3 @@ $pdf_result = $conn->query($pdf_sql);
 </body>
 
 </html>
-
-<?php
-// Close database connection
-$conn->close();
-?>
