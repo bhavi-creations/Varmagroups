@@ -31,7 +31,7 @@
                 <!-- Nested Row within Card Body -->
                 <div class="row">
                 <div class="col-lg-6 d-none d-lg-block  ">
-                                <img src="img/login img.webp" alt="login image" class="img-fluid">
+                                <img src="img/main_logo 1.png" alt="login image" class="img-fluid">
                             </div>
                     <div class="col-lg-6">
                         <div class="p-5">
