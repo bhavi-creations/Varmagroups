@@ -6,9 +6,9 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
     $pass = "";
     $db = "varmagroups";
 } else {
-    $user = "projects";
-    $pass = "MWuV3uffxsBQ7Gg";
-    $db = "projects";
+    $user = "varmagroups_in";
+    $pass = "IWaj7exZ0ZMqBvc";
+    $db = "varmagroups_in";
 }
 
 
