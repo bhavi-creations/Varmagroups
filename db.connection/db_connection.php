@@ -7,9 +7,9 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
     $password = "";
     $dbname = "varmagroups";
 } else {
-    $username = "projects";
-    $password = "MWuV3uffxsBQ7Gg";
-    $dbname = "projects";
+    $username = "varmagroups_in";
+    $password = "IWaj7exZ0ZMqBvc";
+    $dbname = "varmagroups_in";
 }
 
 // Create connection
